@@ -1,11 +1,8 @@
- <%= simple_form_for(booking) do |f| %>
+ <%= simple_form_for [dragon, booking] do |f| %>
 
-  <%= f.input :start_time, as: :date,
+  <%= f.input :start_date, as: :date,
   order: [:day, :month, :year] %>
-  <%= f.input :end_time, as: :date,
+  <%= f.input :end_date, as: :date,
   order: [:day, :month, :year] %>
-  <%= f.input :accepts, as: :boolean, checked_value: 'positive', unchecked_value: 'negative' %>
   <%= f.button :submit %>
  <% end %>
-
-
