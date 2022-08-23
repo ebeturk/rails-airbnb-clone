@@ -1,2 +1,13 @@
-<h1>Dragons#show</h1>
-<p>Find me in app/views/dragons/show.html.erb</p>
+<h1>See Dragon Details</h1>
+
+<ul>
+  <% @dragons.each do |dragon| %>
+  <li> <%= dragon.name %> </li>
+  <li> <%= dragon.power %> </li>
+  <li> <%= dragon.age %> </li>
+  <li> <%= dragon.level %></li>
+  <li> <%= dragon.price %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Go back to all Dragons", dragons_path(@dragon) %>
