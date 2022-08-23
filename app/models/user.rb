@@ -5,5 +5,5 @@ class User < ApplicationRecord
   has_many :dragons
 
   devise :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :validatable\
+    :recoverable, :rememberable, :validatable
 end

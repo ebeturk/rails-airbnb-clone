@@ -1,2 +1,9 @@
-<h1>Dragons#index</h1>
-<p>Find me in app/views/dragons/index.html.erb</p>
+<h1>See All Dragons </h1>
+
+<ul>
+  <% @dragons.each do |dragon| %>
+    <li> <%= link_to dragon.name, dragon_path(dragon) %> </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a Dragon", new_dragon_path %>

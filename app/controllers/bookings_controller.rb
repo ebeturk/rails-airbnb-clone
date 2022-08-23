@@ -1,11 +1,13 @@
 class BookingsController < ApplicationController
   def new
+    @dragon = Dragon.find(params[:dragon_id])
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
     @dragon = Dragon.find(params[:dragon_id])
+    @booking.user = current_user
     @booking.dragon = @dragon
     @booking.save
     redirect_to dragon_path(@dragon)
@@ -21,6 +23,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :user_id, :dragon_id)
+    params.require(:booking).permit(:start_date, :end_date, :dragon_id)
   end
 end
