@@ -1,9 +1,5 @@
- <%= simple_form_for(booking) do |f| %>
-
-  <%= f.input :start_time %>
-  <%= f.input :end_time %>
-  <%= f.submit %>
+ <%= simple_form_for [dragon, booking] do |f| %>
+  <%= f.input :start_date, as: :date, order: [:day, :month, :year] %>
+  <%= f.input :end_date, as: :date, order: [:day, :month, :year] %>
+  <%= f.button :submit %>
  <% end %>
-
-<p>Find me in app/views/bookings/create.html.erb</p>
-
