@@ -9,8 +9,12 @@ class BookingsController < ApplicationController
     @dragon = Dragon.find(params[:dragon_id])
     @booking.user = current_user
     @booking.dragon = @dragon
-    @booking.save
-    redirect_to dragon_path(@dragon)
+    if @booking.save
+      redirect_to dragon_path(@dragon), notice: "The beast is all yours!"
+    else
+      render :new, status: :unprocessable_entity
+    end
+
   end
 
   def destroy
