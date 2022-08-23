@@ -6,7 +6,6 @@ class DragonsController < ApplicationController
   end
 
   def show
-    @dragon = Dragon.find(params[:id])
   end
 
   def new
