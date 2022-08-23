@@ -1,2 +1,5 @@
-<h1>Dragons#new</h1>
-<p>Find me in app/views/dragons/new.html.erb</p>
+<h1>Create a dragon</h1>
+
+<%= render "form", dragon: @dragon %>
+<%= link_to "Go back to all Dragons", dragons_path(@dragon) %>
+
