@@ -14,7 +14,6 @@ class BookingsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-
   end
 
   def destroy
@@ -29,4 +28,5 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :dragon_id)
   end
+
 end
