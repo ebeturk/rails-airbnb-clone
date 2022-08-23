@@ -1,5 +1,5 @@
 class DragonsController < ApplicationController
-  before_action :set_dragon, only [:show, :destroy]
+  before_action :set_dragon, only: [:show, :destroy]
 
   def index
     @dragons = Dragon.all
