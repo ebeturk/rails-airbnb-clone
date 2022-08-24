@@ -1,0 +1,60 @@
+.card-dragon {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.title-card {
+  font-family: Circular;
+}
+
+.card-dragon > img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-dragon h3 {
+  font-size: 37px;
+  font-family: Circular;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.card-dragon h4, h5 {
+  font-size: 20px;
+  opacity: .7;
+  margin: 0;
+  font-family: Circular;
+  padding-bottom: 10px;
+}
+
+.card-dragon h6 {
+  font-family: Circular;
+  opacity: .7;
+}
+
+.card-dragon .card-dragon-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+
+}
+
+.card-dragon-info {
+  padding: 40px;
+}
+
+.card-dragon-info
+
+.card-dragon-info .card-dragon-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}

@@ -11,6 +11,7 @@
   </head>
 
   <body>
+
 <%= render "layouts/shared/customize-navbar" %>
   <div class="container">
     <%= yield %>
@@ -19,8 +20,15 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
+
+    <div class="wrapper">
+      <%= render "layouts/shared/customize-navbar" %>
+      <div class="container">
+        <%= yield %>
+      </div>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= render "shared/footer" %>
+    </div>
   </body>
-  <footer >
-    <%= render "shared/footer" %>
-  </footer>
 </html>
