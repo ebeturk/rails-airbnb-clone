@@ -1,13 +1,22 @@
-<h1>See Dragon Details</h1>
+<h1 class="title-card">See Dragon Details</h1>
 
-<ul>
-  <li> <%= @dragon.name %> </li>
-  <li> <%= @dragon.power %> </li>
-  <li> <%= @dragon.age %> </li>
-  <li> <%= @dragon.level %></li>
-  <li> <%= @dragon.price %></li>
-</ul>
+<div class="card-dragon">
+  <img src="https://cdnb.artstation.com/p/assets/images/images/008/338/981/large/jia-hao-2017-spikydragon-comp-01.jpg?1512099248" />
+  <div class="card-dragon-info">
+    <div>
+      <h3> <%= @dragon.name %> </h3>
+      <h4> Special Power: <%= @dragon.power %> </h4>
+      <h5> Age: <%= @dragon.age %> </h5>
+      <h5> Level: <%= @dragon.level %></h5>
+    </div>
 
-<%= link_to "Book this Beast!", new_dragon_booking_path(@dragon) %>
+    <h5 class="card-dragon-pricing"> Price: ₿ <%= @dragon.price %></h5>
+    <h6>Free cancellation for 48 hours</h6>
+    <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
+  </div>
+</div>
+<div class="buttons">
+  <%= link_to "Book this Beast!", new_dragon_booking_path(@dragon), class: "btn btn-ghost" %>
+  <%= link_to "Back to Dragons", dragon_path, class: "btn btn-ghost" %>
+</div>
 
-<%= link_to "Back to Dragons", dragons_path %>

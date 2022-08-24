@@ -1,9 +1,9 @@
-<h1>See All Dragons </h1>
+<h1>See All Our Dragons </h1>
 
-<ul>
+<div class="cards">
   <% @dragons.each do |dragon| %>
-    <li> <%= link_to dragon.name, dragon_path(dragon) %> </li>
+  <%= render "layouts/shared/card_index", dragon: dragon  %>
   <% end %>
-</ul>
+</div>
 
-<%= link_to "Create a Dragon", new_dragon_path %>
+<%= link_to "Add your Dragon", new_dragon_path %>

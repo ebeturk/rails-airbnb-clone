@@ -1,5 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
+
     <%= link_to root_path, class: "navbar-brand" do %>
 
       <%= image_tag "https://scalebranding.com/wp-content/uploads/2022/01/Letter-D-Dragon-Logo.jpg" %>
@@ -13,14 +14,15 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Dragons", dragons_path, class: "nav-link" %>
+
           </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to "Dragons", dragons_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://images.unsplash.com/photo-1599987793208-1e8473d5147f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
 
               <%= link_to "See my Beasts", dashboard_path, class: "dropdown-item" %>
               <%= link_to "See my Bookings", bookings_path, class: "dropdown-item" %>
