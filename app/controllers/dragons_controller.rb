@@ -6,7 +6,6 @@ class DragonsController < ApplicationController
   end
 
   def show
-    @dragon = Dragon.find(params[:id])
   end
 
   def new
@@ -15,7 +14,7 @@ class DragonsController < ApplicationController
 
   def create
     @dragon = Dragon.new(dragon_params)
-    # @dragon.user = current_user
+    @dragon.user = current_user
     @dragon.save
     redirect_to dragons_path(@dragon)
   end
@@ -29,7 +28,7 @@ class DragonsController < ApplicationController
   private
 
   def dragon_params
-    params.require(:dragons).permit(:name, :power, :level, :age, :price)
+    params.require(:dragon).permit(:name, :power, :level, :age, :price)
   end
 
   def set_dragon
