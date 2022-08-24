@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% <h1>See All Our Dragons </h1>
 
 <div class="cards">
@@ -9,3 +10,16 @@
 <%= link_to "Add your Dragon", new_dragon_path %> %>
 
 <h1>See All Our Dragons </h1>
+=======
+<h1>See All Our Dragons </h1>
+
+<div class="cards">
+  <% @dragons.each do |dragon| %>
+
+  <%= render "layouts/shared/card_index", dragon: dragon  %>
+    <li> <%= link_to dragon.name, dragon_path(dragon) %> </li>
+  <% end %>
+</div>
+
+<%= link_to "Add your Dragon", new_dragon_path %>
+>>>>>>> master
