@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # puts "Cleaning database..."
-# Dragon.destroy_all
+
 require "faker"
 
 puts "Creating dragons..."
