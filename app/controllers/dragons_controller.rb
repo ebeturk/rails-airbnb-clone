@@ -15,8 +15,10 @@ class DragonsController < ApplicationController
   def create
     @dragon = Dragon.new(dragon_params)
     @dragon.user = current_user
-    @dragon.save
-    redirect_to dragons_path(@dragon)
+     if @dragon.save
+      redirect_to dragons_path(@dragon)
+     else render :new
+     end
   end
 
   def dashboard
@@ -32,7 +34,7 @@ class DragonsController < ApplicationController
   private
 
   def dragon_params
-    params.require(:dragon).permit(:name, :power, :level, :age, :price)
+    params.require(:dragon).permit(:name, :power, :level, :age, :price, :photo)
   end
 
   def set_dragon
