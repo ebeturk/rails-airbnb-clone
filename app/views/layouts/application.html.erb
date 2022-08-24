@@ -12,6 +12,15 @@
 
   <body>
 
+<%= render "layouts/shared/customize-navbar" %>
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+
     <div class="wrapper">
       <%= render "layouts/shared/customize-navbar" %>
       <div class="container">
