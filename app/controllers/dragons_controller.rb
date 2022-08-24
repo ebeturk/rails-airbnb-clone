@@ -1,5 +1,5 @@
 class DragonsController < ApplicationController
-  before_action :set_dragon, only: [:show, :destroy]
+  before_action :set_dragon, only: [:show, :edit, :update, :destroy]
 
   def index
     @dragons = Dragon.all
@@ -27,6 +27,14 @@ class DragonsController < ApplicationController
     @dragon = Dragon.find(params[:id])
     @dragon.destroy
     redirect_to dragons_path, status: :see_other
+  end
+
+  def edit
+  end
+
+  def update
+    @dragon.update(dragon_params)
+    redirect_to dragon_path(@dragon)
   end
 
   private
