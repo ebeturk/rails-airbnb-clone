@@ -2,9 +2,7 @@
 
 <div class="cards">
   <% @dragons.each do |dragon| %>
-
   <%= render "layouts/shared/card_index", dragon: dragon  %>
-    <li> <%= link_to dragon.name, dragon_path(dragon) %> </li>
   <% end %>
 </div>
 
