@@ -1,13 +1,13 @@
 <h1>See Dragon Details</h1>
 
 <ul>
-  <% @dragons.each do |dragon| %>
-  <li> <%= dragon.name %> </li>
-  <li> <%= dragon.power %> </li>
-  <li> <%= dragon.age %> </li>
-  <li> <%= dragon.level %></li>
-  <li> <%= dragon.price %></li>
-  <% end %>
+  <li> <%= @dragon.name %> </li>
+  <li> <%= @dragon.power %> </li>
+  <li> <%= @dragon.age %> </li>
+  <li> <%= @dragon.level %></li>
+  <li> <%= @dragon.price %></li>
 </ul>
 
-<%= link_to "Go back to all Dragons", dragons_path(@dragon) %>
+<%= link_to "Book this Beast!", new_dragon_booking_path(@dragon) %>
+
+<%= link_to "Back to Dragons", dragons_path %>
