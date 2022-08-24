@@ -6,9 +6,11 @@ require "open-uri"
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
 file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Smaug_par_David_Demaret.jpg/290px-Smaug_par_David_Demaret.jpg')
 puts "Cleaning database..."
 Dragon.destroy_all
+
 require "faker"
 
 puts "Creating dragons..."
