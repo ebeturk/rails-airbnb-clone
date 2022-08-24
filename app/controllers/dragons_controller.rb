@@ -19,6 +19,10 @@ class DragonsController < ApplicationController
     redirect_to dragons_path(@dragon)
   end
 
+  def dashboard
+    @dragons = Dragon.all.where(user_id: current_user.id)
+  end
+
   def destroy
     @dragon = Dragon.find(params[:id])
     @dragon.destroy
