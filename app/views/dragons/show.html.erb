@@ -12,6 +12,9 @@
 
     <h5 class="card-dragon-pricing"> Price: ₿ <%= @dragon.price %></h5>
     <h6>Free cancellation for 48 hours</h6>
+    <% if @dragon.bookings.find_by(user_id: current_user.id) %>
+      <h6 class="text-danger"><%= "This beast is already booked" %></h6>
+    <% end %>
     <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
   </div>
 </div>
