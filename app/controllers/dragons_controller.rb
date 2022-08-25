@@ -15,10 +15,10 @@ class DragonsController < ApplicationController
   def create
     @dragon = Dragon.new(dragon_params)
     @dragon.user = current_user
-     if @dragon.save
+    if @dragon.save
       redirect_to dragons_path(@dragon)
-     else render :new
-     end
+    else render :new
+    end
   end
 
   def dashboard
