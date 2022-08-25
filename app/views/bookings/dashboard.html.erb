@@ -1,9 +1,10 @@
 <h1>My Bookings ✅</h1>
 
-<ul>  <% @bookings.each do |booking| %>
-  <li>
-    <%= link_to booking.start_date, booking_path(booking) %>
-    <%= link_to "Cancel this booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "card-remove-link" %>
-  </li>
+<div>  <% @bookings.each do |booking| %>
+    <p class="calendar"><%= link_to booking.start_date, booking_path(booking) %></p>
+    <div class="booking-button">
+      <%= link_to "Cancel booking", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "card-remove-link" %>
+    </div>
+
   <% end %>
-</ul>
+</div>
