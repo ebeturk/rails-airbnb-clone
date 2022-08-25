@@ -5,6 +5,4 @@ class Dragon < ApplicationRecord
 
   validates :name, :power, :level, :age, :price, presence: true
 
-  
-
 end
