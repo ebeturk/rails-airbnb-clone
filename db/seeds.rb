@@ -7,11 +7,13 @@ require "open-uri"
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-file = URI.open('')
-puts "Cleaning database..."
-Dragon.destroy_all
-
+# file = URI.open('')
 require "faker"
+
+puts "Cleaning database..."
+Booking.destroy_all
+Dragon.destroy_all
+User.destroy_all
 
 puts "Creating dragons..."
 
@@ -27,15 +29,14 @@ puts "Creating dragons..."
       age: rand(1..1500),
       level: rand(1..10),
       price: rand(5..500),
-      user: user
+      user: User.first
       )
       i = rand(0..30)
-    dragon.photo.attach(io: URI.open(Cloudinary::Search.expression('folder=dragons').execute["resources"][i]["url"]),
+    dragon.photo.attach(io: URI.open(Cloudinary::Search.expression('folder=dragons').execute["resources"][i]),
       filename: Cloudinary::Search.expression('folder=dragons').execute["resources"][i]["filename"],
       content_type: "image/#{Cloudinary::Search.expression('folder=cats').execute["resources"][i]["format"]}")
 dragon.save!
     end
-
 end
 
 
