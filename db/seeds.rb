@@ -7,7 +7,7 @@ require "open-uri"
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-file = URI.open('')
+# file = URI.open('')
 puts "Cleaning database..."
 Dragon.destroy_all
 
@@ -23,16 +23,16 @@ puts "Creating dragons..."
   5.times do |i|
       dragon = Dragon.create!(
       name: Faker::TvShows::GameOfThrones.dragon.capitalize,
-      power: ["Enhanced Senses", "Enhanced Speed", "Flight", "Pyrokinesis", "Shapeshifting", "Combat", "Bake Cookies", "Drink Fire", "Super Healer", "Super Nanny", "Plant Propagator", "Super Fire Extinguisher", "Super Nice Taco Maker", "Super Debugger", "Super Drinker" ].shuffle.first,
+      power: ["Enhanced Senses", "Enhanced Speed", "Flight", "Pyrokinesis", "Shapeshifting", "Combat", "Bake Cookies", "Drink Fire", "Super Healer", "Super Nanny", "Plant Propagator", "Super Fire Extinguisher", "Super Nice Taco Maker", "Super Debugger", "Super Drinker", "Yells at You", "Wakes you Up" ].shuffle.first,
       age: rand(1..1500),
       level: rand(1..10),
       price: rand(5..500),
       user: user
       )
-      i = rand(0..30)
-    dragon.photo.attach(io: URI.open(Cloudinary::Search.expression('folder=dragons').execute["resources"][i]["url"]),
-      filename: Cloudinary::Search.expression('folder=dragons').execute["resources"][i]["filename"],
-      content_type: "image/#{Cloudinary::Search.expression('folder=cats').execute["resources"][i]["format"]}")
+      itr = rand(0..30)
+    dragon.photo.attach(io: URI.open(Cloudinary::Search.expression('folder=Drago').execute["resources"][itr]["url"]),
+      filename: Cloudinary::Search.expression('folder=Drago').execute["resources"][itr]["filename"],
+      content_type: "image/#{Cloudinary::Search.expression('folder=Drago').execute["resources"][itr]["format"]}")
 dragon.save!
     end
 

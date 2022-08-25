@@ -2,19 +2,26 @@
 
 <div class="card-dragon">
   <img src="https://cdnb.artstation.com/p/assets/images/images/008/338/981/large/jia-hao-2017-spikydragon-comp-01.jpg?1512099248" />
-  <div class="card-dragon-info">
-    <div>
-      <h3> <%= @dragon.name %> </h3>
-      <h4> Special Power: <%= @dragon.power %> </h4>
-      <h5> Age: <%= @dragon.age %> </h5>
-      <h5> Level: <%= @dragon.level %></h5>
-    </div>
+      <div>
+        <h3> <%= @dragon.name %> </h3>
+        <h4> Special Power: <%= @dragon.power %> </h4>
+        <h5> Age: <%= @dragon.age %> </h5>
+        <h5> Level: <%= @dragon.level %></h5>
+      </div>
 
-    <h5 class="card-dragon-pricing"> Price: ₿ <%= @dragon.price %></h5>
-    <h6>Free cancellation for 48 hours</h6>
+      <h5 class="card-dragon-pricing"> Price: ₿ <%= @dragon.price %></h5>
+      <h6>Free cancellation for 48 hours</h6>
+
+      <% if @dragon.bookings.find_by(user_id: current_user.id) %>
+        <h6 class="text-danger"><%= "This beast is already booked" %></h6>
+      <% end %>
+
+      <br>
+      <%= render "bookings/form", dragon: @dragon, booking: @booking %>
     <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
   </div>
 </div>
+
 <div class="buttons">
   <%= link_to "Book this Beast!", new_dragon_booking_path(@dragon), class: "btn btn-ghost" %>
   <%= link_to "Back to Dragons", dragons_path, class: "btn btn-ghost" %>

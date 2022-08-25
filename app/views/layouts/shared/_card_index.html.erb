@@ -1,9 +1,19 @@
 <div class="content">
   <div>
-    <img  class="image" src="https://images.unsplash.com/photo-1560456001-bac27801a851?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1576&q=80" />
+  <%= cl_image_tag dragon.photo.key, width: 300, height: 300, crop: :fill, radius: 20 %>
+
+  <%# <%= cl_image_tag dragon.photo.key, :transformation=>[
+  {:effect=>"trim"},
+  {:width=>"296", :height=>"300", :crop=>"lpad"},
+  {:border=>"4px_solid_gold"}
+  ] %>
+    <%# <img  class="image" src="https://images.unsplash.com/photo-1560456001-bac27801a851?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1576&q=80" /> %>
   </div>
   <div class="card" class="co-6 col-sm-6 col-md-4 mb-3">
+    <% if dragon.bookings.find_by(user_id: current_user.id) %>
+      <h6 class="text-danger"><%= "This beast is already booked" %></h6>
+    <% end %>
     <h2><%=link_to dragon.name, dragon_path(dragon)%></h2>
     <h2 class="card-trip-pricing"> ₿ <%= dragon.price %></h2>
-   </div>
+  </div>
 </div>
