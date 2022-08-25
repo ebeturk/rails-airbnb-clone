@@ -1,3 +1,14 @@
 
- <%= render "layouts/shared/banner"  %>
-  <%= render "layouts/shared/search-form"  %>
+  <%= render "layouts/shared/banner"  %>
+
+  <div class="container">
+    <%= render "layouts/shared/search-form"  %>
+  </div>
+
+  <h1>Can these beasts help you?</h1>
+
+<div class="cards">
+  <% @dragons.each do |dragon| %>
+  <%= render "layouts/shared/card_index", dragon: dragon  %>
+  <% end %>
+</div>
