@@ -12,11 +12,13 @@
 
     <h5 class="card-dragon-pricing"> Price: ₿ <%= @dragon.price %></h5>
     <h6>Free cancellation for 48 hours</h6>
+    <% if @dragon.bookings.find_by(user_id: current_user.id) %>
+      <h6 class="text-danger"><%= "This beast is already booked" %></h6>
+    <% end %>
     <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
   </div>
 </div>
 <div class="buttons">
   <%= link_to "Book this Beast!", new_dragon_booking_path(@dragon), class: "btn btn-ghost" %>
-  <%= link_to "Back to Dragons", dragon_path, class: "btn btn-ghost" %>
+  <%= link_to "Back to Dragons", dragons_path, class: "btn btn-ghost" %>
 </div>
-
