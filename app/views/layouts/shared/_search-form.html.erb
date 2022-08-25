@@ -17,4 +17,8 @@
   %>
   <%= submit_tag "Find the Beast!", class: "btn btn-primary" %>
 <% end %>
+<% if params[:query] %>
+    <h2 class="text-center"><%= "Can these beasts help you with your mission?" %></h2>
+<% end %>
+
 </div>
