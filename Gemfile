@@ -74,6 +74,8 @@ gem "devise"
 
 gem 'faker'
 
+gem "geocoder"
+
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
