@@ -3,6 +3,13 @@ class DragonsController < ApplicationController
 
   def index
     @dragons = Dragon.all
+    # The `geocoded` scope filters only dragons with coordinates
+    @markers = @dragons.geocoded.map do |dragon|
+      {
+        lat: dragon.latitude,
+        lng: dragon.longitude
+      }
+    end
   end
 
   def show
