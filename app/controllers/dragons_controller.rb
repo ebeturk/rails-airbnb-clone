@@ -28,7 +28,8 @@ class DragonsController < ApplicationController
     @dragon.user = current_user
     if @dragon.save
       redirect_to dragons_path(@dragon)
-    else render :new
+    else
+      render :new
     end
   end
 
