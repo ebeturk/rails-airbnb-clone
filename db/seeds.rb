@@ -49,7 +49,9 @@ require "open-uri"
 
 # file = URI.open('')
 puts "Cleaning database..."
+Booking.destroy_all
 Dragon.destroy_all
+User.destroy_all
 
 require "faker"
 
