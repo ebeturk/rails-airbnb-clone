@@ -3,6 +3,8 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 10px;
+  // height: 400px;
+  // object-fit: cover;
 }
 
 .title-card {
@@ -10,10 +12,12 @@
 }
 
 .card-dragon > img {
-  height: 400px;
+  height: 500px;
   width: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  background-position: center;
+
 }
 
 .card-dragon-description {

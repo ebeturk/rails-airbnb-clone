@@ -13,11 +13,11 @@
   <body>
     <div class="wrapper">
       <%= render "layouts/shared/customize-navbar" %>
+      <p class="notice row col-6 justify-content-center btn-lg btn-online"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <div>
         <%= yield %>
       </div>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
       <%= render "shared/footer" %>
     </div>
 
