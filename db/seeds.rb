@@ -50,7 +50,7 @@ require "open-uri"
 # file = URI.open('')
 puts "Cleaning database..."
 
-Faker::Config.locale = 'de'
+# Faker::Config.locale = 'de'
 
 Booking.destroy_all
 Dragon.destroy_all
