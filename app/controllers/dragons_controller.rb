@@ -9,7 +9,7 @@ class DragonsController < ApplicationController
       {
         lat: dragon.latitude,
         lng: dragon.longitude,
-        # info_window: render_to_string(partial: "info_window", locals: { dragon: dragon }),
+        # info_window: render_to_string(partial: "shared/info_window", locals: { dragon: dragon }),
         # info_window: "<h1>hola probando</h1>",
         image_url: helpers.asset_url("tagmap.png")
       }

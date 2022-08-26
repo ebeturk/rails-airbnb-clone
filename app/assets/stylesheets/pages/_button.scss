@@ -19,7 +19,7 @@
 // //   opacity: 1;
 // // }
 
-.buttons {
+.buttons, .button-create {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -117,8 +117,6 @@
   left: 100%;
 }
 
-
-
 .btn-back-to-dragons {
   margin-left: 267px;
   margin-top: -47px;
@@ -155,5 +153,15 @@
 
 
 .button-create {
-  
+
+}
+
+#pretty-btn {
+    background-color: #b09951;
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
 }
