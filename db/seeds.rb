@@ -75,7 +75,7 @@ puts "Creating dragons..."
         price: rand(5..500),
         user: user
       )
-      itr = rand(1..29)
+      itr = rand(1..26)
       puts itr
     dragon.photo.attach(io: URI.open(Cloudinary::Search.expression('folder=Drago').execute["resources"][itr]["url"]), filename: Cloudinary::Search.expression('folder=Drago').execute["resources"][itr]["filename"], content_type: "image/#{Cloudinary::Search.expression('folder=Drago').execute["resources"][itr]["format"]}")
     dragon.save
