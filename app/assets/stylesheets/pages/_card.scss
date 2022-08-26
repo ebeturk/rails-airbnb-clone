@@ -16,7 +16,12 @@
   border-radius: 10px 10px 0 0;
 }
 
-.card-dragon h3 {
+.card-dragon-description {
+  margin: 30px;
+  margin-left: 70px;
+}
+
+.card-dragon-description h3 {
   font-size: 37px;
   font-family: Circular;
   font-weight: bold;
@@ -25,7 +30,7 @@
   color: #000000;
 }
 
-.card-dragon h4, h5 {
+.card-dragon-description h4, h5 {
   font-size: 20px;
   opacity: .7;
   margin: 0;
@@ -33,7 +38,7 @@
   padding-bottom: 10px;
 }
 
-.card-dragon h6 {
+.card-dragon-description h6 {
   font-family: Circular;
   opacity: .7;
 }
