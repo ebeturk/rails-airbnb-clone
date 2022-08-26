@@ -1,10 +1,12 @@
 <h1>My Beasts 🐲</h1>
 
 <ul>  <% @dragons.each  do |dragon| %>
-    <li>
-      <%= link_to dragon.name, dragon_path(dragon) %>
+    <li class="list-group list-group-flush">
+      <%= link_to dragon.name, dragon_path(dragon), class: 'btnb btnb-outline-warning' %>
       <br>
-      <%= link_to "Edit the Dragon", edit_dragon_path(dragon), class: 'btn btn-light btn-sm border' %>
+      <%= cl_image_tag dragon.photo.key, width: 300, height: 300, crop: :fill, radius: 20 %>
+      <br>
+      <%= link_to "Edit the Dragon", edit_dragon_path(dragon), class: 'btn btn-light btn-sm border col-3' %>
     </li>
   <% end %>
 </ul>
