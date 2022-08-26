@@ -1,4 +1,6 @@
 <h1>Add a Dragon</h1>
 
-<%= render "form", dragon: @dragon %>
-<%= link_to "Go back to all Dragons", dragons_path(@dragon) %>
+<div class="form-create">
+  <%= render "form", dragon: @dragon %>
+  <%= link_to "Go back to all Dragons", dragons_path(@dragon) %>
+</div>

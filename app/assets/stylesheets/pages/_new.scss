@@ -1,0 +1,46 @@
+.dragon-new-container {
+  margin: 0 auto;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .input-width {
+    min-width: 60px;
+  }
+
+  .file-width-fix {
+    width: 254px;
+  }
+}
+
+.form-input {
+  align-items: center;
+}
+.form-create {
+  padding: 57px 65px;
+  padding-bottom: 65px;
+  display: table-cell;
+
+  display: block;
+  width: 100%;
+  padding: 37px 30px;
+  padding-bottom: 45px;
+
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 33px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  // padding: 5px 0;
+  // font-size: 16px;
+  // color: #ccc;
+  // background: transparent;
+}
+
+.input {
+  // margin-right: 20px;
+}
