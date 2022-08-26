@@ -5,7 +5,7 @@
 
       <%= image_tag "https://scalebranding.com/wp-content/uploads/2022/01/Letter-D-Dragon-Logo.jpg" %>
     <% end %>
-
+    <h2> <%= link_to "🐉 DRA-GO🐉", dragons_path, class: "nav-link fa-solid" %></h2>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,7 +17,7 @@
 
           </li>
           <li class="nav-item">
-            <%= link_to "Dragons", dragons_path, class: "nav-link" %>
+            <%= link_to "Messages", dragons_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://pbs.twimg.com/profile_images/1243475459125456896/e-zIQiFY_400x400.jpg", class: "rounded-circle dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

@@ -1,5 +1,5 @@
 <h1>See All Our Dragons </h1>
-
+<br>
 <div class="cards">
   <% @dragons.each do |dragon| %>
   <%= render "layouts/shared/card_index", dragon: dragon  %>
@@ -7,8 +7,13 @@
 </div>
 
 <div class="map" style="width: 100%; height: 600px;"
+
+<br>
+<div class="container btn btn-warning btn-block">
+  <%= link_to "Add your Dragon to the flock", new_dragon_path %>
+</div>
+<div style="width: 100%; height: 600px;"
+
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
-<%= link_to "Add your Dragon", new_dragon_path %>
