@@ -1,14 +1,30 @@
-<%= form_for(dragon) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :power %>
-  <%= f.text_field :power %>
-  <%= f.label :level %>
-  <%= f.text_field :level %>
-  <%= f.label :age %>
-  <%= f.text_field :age %>
-  <%= f.label :price %>
-  <%= f.text_field :price %>
-  <%= f.file_field :photo %>
-  <%= f.submit %>
-<% end %>
+<div class="form-input dragon-new-container">
+  <%= form_for(dragon) do |f| %>
+    <div class="input-group">
+      <%= f.label :name, class: "input input-width" %>
+      <%= f.text_field :name, class: "input" %>
+    </div>
+    <div class="input-group">
+      <%= f.label :power, class: "input input-width" %>
+      <%= f.text_field :power, class: "input" %>
+    </div>
+    <div class="input-group">
+      <%= f.label :level, class: "input input-width" %>
+      <%= f.text_field :level, class: "input" %>
+    </div>
+    <div class="input-group">
+      <%= f.label :age, class: "input input-width" %>
+      <%= f.text_field :age, class: "input" %>
+    </div>
+    <div class="input-group">
+      <%= f.label :price, class: "input input-width" %>
+      <%= f.text_field :price, class: "input" %>
+    </div>
+    <div class="input-group">
+      <%= f.file_field :photo, class: "button-create file-width-fix" %>
+    </div>
+    <div class="input-group">
+      <%= f.submit class: "button-create" %>
+    </div>
+  <% end %>
+</div>
