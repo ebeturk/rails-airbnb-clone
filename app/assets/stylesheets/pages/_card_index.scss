@@ -1,7 +1,7 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 50px;
 }
 .image {
   border-radius: 10px 10px 0 0;
@@ -32,11 +32,14 @@ a:hover {
   border-radius: 0 0 30px 30px;
 }
 .content {
-
     width: 250px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
+<<<<<<< HEAD
   border-radius: 30px 30px 30px 30px;
+=======
+    border-radius: 0 0 10px 10px;
+>>>>>>> master
 }
 
 // Smallest device
