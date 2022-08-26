@@ -14,7 +14,9 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-
+          <li class="nav-item">
+            <%# <%= link_to "Map", map_path, class: "nav-link login" %>
+          </li>
           </li>
 
           <li class="nav-item dropdown">
@@ -32,8 +34,8 @@
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link login" %>
           </li>
-           <li class="nav-item">
-            <%= link_to "Sign Up", new_registration_path(resource_name), class: "nav-link login" %>
+          <li class="nav-item">
+            <%= link_to "Sign Up",  new_user_registration_path, class: "nav-link login" %>
           </li>
         <% end %>
       </ul>
