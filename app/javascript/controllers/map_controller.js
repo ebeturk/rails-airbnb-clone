@@ -19,13 +19,6 @@ export default class extends Controller {
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
   }
-  #addMarkersToMap() {
-    this.markersValue.forEach((marker) => {
-      new mapboxgl.Marker()
-        .setLngLat([ marker.lng, marker.lat ])
-        .addTo(this.map)
-    })
-  }
 
   #fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()
@@ -36,13 +29,14 @@ export default class extends Controller {
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       const customMarker = document.createElement('div')
+      customMarker.className = "marker"
       customMarker.style.height = "30px"
       customMarker.style.width = "30px"
-      customMarker.style.backgroundImage = 'url('${ marker.image_url }')'
-
+      customMarker.style.backgroundSize = "cover"
+      customMarker.style.backgroundImage = `url('${ marker.image_url }')`
 
       const popup = new mapboxgl.Popup().setHTML(marker.info_window) // Add this
-      new mapboxgl.Marker( element: customMarker)
+      new mapboxgl.Marker(customMarker)
         .setLngLat([ marker.lng, marker.lat ])
         .setPopup(popup) // Add this
         .addTo(this.map)
